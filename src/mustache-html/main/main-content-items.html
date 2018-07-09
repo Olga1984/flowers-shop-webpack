@@ -1,0 +1,23 @@
+<section class="content-items">
+    {{#contentItems}}
+    <div class="item">
+        <div class="content-item"><div class="inner-item-wrapper">
+            <figure class="content-picture"><span class="sale-value">{{salevalue}}</span>
+                <img class="content-img" src="images/content{{pointer}}.png" alt="flowers" />
+                <figcaption class="content-product-title">{{title}}</figcaption>
+                <p class="content-description">
+                    <span class="main-description">{{description}}</span>
+                <p class="current-price">
+                    <span>{{currentprice}}</span>
+                    <span class="new-price">{{newprice}}</span>
+                    <span class="old-price">{{oldprice}}</span>
+                </p>
+                </p>
+            </figure>
+            <button class="btn content-btn add-btn ">Add to cart</button>
+            <button class="btn content-btn details-btn">Details</button>
+        </div>
+        </div>
+    </div>
+    {{/contentItems}}
+</section>

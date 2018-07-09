@@ -1,30 +1,13 @@
-console.log('This is main.js');
 // news-line
-const sectionItems = {
+export const newsLinesectionItems = {
     "listItems":[
         { pointer: "1"},
         { pointer: "2"},
         { pointer: "3"}
     ]
 };
-const templateNewsSection = '<section class="items">{{#listItems}}<div class="item">{{>items}}</div>{{/listItems}}</section>';
-const partialsNewsItem = {
-    items: '<figure class="news-picture">'
-    +'<img class="news-img" src="images/{{pointer}}.png" alt="flowers" />'
-    +'<p class="actions-banner">'
-    +'<span>love & romance</span>'
-    +'<br />'
-    +'<span>new arrivals</span>'
-    +'</p>'
-    +'<a href="#" class="link shop-now">Shop now!</a>'
-    +'</figure>'};
-
-const htmlMainSection = Mustache.to_html(templateNewsSection, sectionItems, partialsNewsItem);
-const mainSection  = document.getElementsByClassName('news-line')[0];
-mainSection.innerHTML = htmlMainSection;
-
 // main-content-sidebar
-const sidebarItems = {
+export const sidebarItems = {
     "sidebarItems":[
         {   pointer: "1",
             description: "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod",
@@ -40,29 +23,8 @@ const sidebarItems = {
             oldprice: "$30.96"}
     ]
 };
-const templateMainSidebar = '<aside class="new-products">'
-    +'<h3 class="content-header">New products</h3>'
-    +'{{#sidebarItems}}<div class="item">{{>items}}</div>{{/sidebarItems}}'
-    +'</aside>';
-const partialsSidebarItem = {items: '<div class="new-item">'
-    +'<figure class="new-product-picture">'
-    +'<img class="new-product-img" src="images/sidebar{{pointer}}.png" alt="flowers" />'
-    +'</figure>'
-    +'<div class="new-description">'
-    +'<h3>Excepteur sint </h3><h3>occaecat cupidatat</h3>'
-    +'<p class="paragraf">{{description}}</p>'
-    +'<p class="paragraf current-price">'
-    +'<span>{{price}}</span><span class="old-price">{{oldprice}}</span>'
-    +'</p>'
-    +'</div>'
-    +'</div>'};
-
-const htmlMainSidebar = Mustache.to_html(templateMainSidebar, sidebarItems, partialsSidebarItem);
-const mainSidebar  = document.getElementsByClassName('main-content-sidebar')[0];
-mainSidebar.innerHTML = htmlMainSidebar;
-
 // content-items
-const contentItems = {
+export const contentItems = {
     "contentItems":[
         {   pointer: "1",
             title: "Excepteur sint occaecat cupidatat non proident",
@@ -114,31 +76,8 @@ const contentItems = {
         }
     ]
 };
-const templateMainContent = '<section class="content-items">'
-    +'{{#contentItems}}<div class="item">{{>items}}</div>{{/contentItems}}'
-    +'</section>';
-const partialsContentItem = {items: '<div class="content-item"><div class="inner-item-wrapper">'
-    +'<figure class="content-picture"><span class="sale-value">{{salevalue}}</span>'
-    +'<img class="content-img" src="images/content{{pointer}}.png" alt="flowers" />'
-    +'<figcaption class="content-product-title">{{title}}</figcaption>'
-    +'<p class="content-description">'
-    +'<span class="main-description">{{description}}</span>'
-    +'<p class="current-price">'
-    +'<span>{{currentprice}}</span>'
-    +'<span class="new-price">{{newprice}}</span>'
-    +'<span class="old-price">{{oldprice}}</span>'
-    +'</p>'
-    +'</p>'
-    +'</figure>'
-    +'<button class="btn content-btn add-btn ">Add to cart</button>'
-    +'<button class="btn content-btn details-btn">Details</button></div></div>'};
-
-const htmlMainContent = Mustache.to_html(templateMainContent, contentItems, partialsContentItem);
-const mainContent  = document.getElementsByClassName('content-items')[0];
-mainContent.innerHTML = htmlMainContent;
-
 // custom-line
-const customBlockItems = {
+export const customBlockItems = {
     "customBlockItems":[
         {   titleofMainHeader: "Custom Block ",
             customHeaderTag: "h3",
@@ -168,32 +107,3 @@ const customBlockItems = {
         },
     ]
 };
-
-const templatecustomBlock = '<section class="items">{{#customBlockItems}}<div class="item">{{>items}}</div>{{/customBlockItems}}</section>';
-const partialscustomBlock = {
-    items: '{{#customHeaderTag}}<{{customHeaderTag}} class="custom-header">{{titleofMainHeader}}{{pointer}}</{{customHeaderTag}}>{{/customHeaderTag}}'
-    +'{{#customPictureTag}}<{{customPictureTag}} class="custom-picture">'
-    +'<img src="images/content-banner{{pointer}}.png" alt="custom product" />'
-    +'</{{customPictureTag}}>{{/customPictureTag}}'
-    +'{{#descriptionTag}}<{{descriptionTag}} class="custom-description">'
-    +'{{#customHeaderTagSecondBlock}}<{{customHeaderTagSecondBlock}} class="custom-header">{{titleofMainHeaderSecondBlock}}{{pointer}}</{{customHeaderTagSecondBlock}}>{{/customHeaderTagSecondBlock}}'
-    +'{{#paragrafTag}}<{{paragrafTag}} class="custom-text">'
-    +'{{descriptionText}}'
-    +'</{{paragrafTag}}>{{/paragrafTag}}'
-    +'</{{descriptionTag}}>{{/descriptionTag}}'
-    +'{{#paragrafHeaderTag}}<{{paragrafHeaderTag}} class="block-header">{{firstParagrafHeaderTitle}}</{{paragrafHeaderTag}}>{{/paragrafHeaderTag}}'
-    +'{{#paragrafTag}}<{{paragrafTag}} class="custom-text">'
-    +'{{firstParagrafText}}</{{paragrafTag}}>{{/paragrafTag}}'
-    +'{{#paragrafHeaderTag}}<{{paragrafHeaderTag}} class="block-header">{{secondParagrafHeaderTitle}}</{{paragrafHeaderTag}}>{{/paragrafHeaderTag}}'
-    +'{{#paragrafTag}}<{{paragrafTag}} class="custom-text">'
-    +'{{secondParagrafText}}</{{paragrafTag}}>{{/paragrafTag}}'
-};
-const htmlcustomBlock = Mustache.to_html(templatecustomBlock, customBlockItems, partialscustomBlock);
-const customBlock  = document.getElementsByClassName('custom-line')[0];
-customBlock.innerHTML = htmlcustomBlock;
-
-
-
-
-
-
