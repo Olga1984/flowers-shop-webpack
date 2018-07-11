@@ -1,0 +1,201 @@
+{{#content-list-wrapper}}<div class="{{item}}">
+    <div class="content">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="link">
+                        <h1>flowers</h1><span class="online-text">ONLINE STORE</span>
+                    </a>
+                </div>
+                <div class="top-panel">
+                    <nav class="top-menu">
+                        <ul class=" list top-panel_menu">
+                            {{#top-panel-list-items}}
+                            <li class="list-item">
+                                <a class="{{class}}">
+                                    {{item}}
+                                    {{#iClass}}
+                                    <i class="{{iClass}}"></i>{{/iClass}}
+                                </a>
+                            </li>
+                            {{/top-panel-list-items}}
+                        </ul>
+                    </nav>
+                    <div class="forms">
+                        <form action="" class="form" name="search">
+                            <div class="search-container">
+                                <span class="search-label"></span>
+                                <input type="search" class="input" />
+                            </div>
+                            <button class="btn" type="submit">Submit</button>
+                        </form>
+                        <form action="" class="form" name="cart">
+                            <div class="cart-button">
+                                <button class="btn" type="submit">cart</button>
+                            </div>
+                            <div class="cart-container">
+                                <i class="icon icon-caret-down1"></i>
+                                <input type="search" class="input" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <nav class="main-menu">
+                    <ul class="list">
+                        {{#main-menu-list}}
+                        <li class="list-item">
+                            <a class="link">{{listitem}}
+                            </a>
+                            {{#new}}
+                            <span class="actions-label">{{new}}</span>
+                            {{/new}}
+                        </li>
+                        {{/main-menu-list}}
+                    </ul>
+                </nav>
+                <div class="slider">
+                    <div class="container">
+                        <p class="bigsale-banner">
+                            <span class="banner-title1">new arrivals</span>
+                            <br />
+                            <span class="banner-title2">birthday</span>
+                            <br />
+                            <span class="banner-title3">BOUQUETS</span>
+                        </p>
+                    </div>
+                    <button type="button" class="btn button navbar-toggle ">Shop now!</button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container news-line">
+                <section class="items">
+                    {{#news-line-list-items}}
+                    <div class="item">
+                        <figure class="news-picture">
+                            <img class="news-img" src="../src/images/{{pointer}}.png" alt="flowers" />
+                            <p class="actions-banner">
+                                <span>love & romance</span>
+                                <br />
+                                <span>new arrivals</span>
+                            </p>
+                            <a href="#" class="link shop-now">Shop now!</a>
+                        </figure>
+                    </div>
+                    {{/news-line-list-items}}
+                </section>
+            </div>
+            <div class="container main-banner">
+                <p class="bigsale-banner">
+                    <span>ROMANCE BOUQUETS</span><br />
+                    <span class="sale">Get up <span>to 70% off</span></span>
+                    <a href="#" class="link shop-now">Shop now!</a>
+                </p>
+            </div>
+            <div class="container main-content">
+                <div class="main-content-sidebar">
+                    <aside class="new-products">
+                        <h3 class="content-header">New products</h3>
+                        {{#sidebarItems}}
+                        <div class="item">
+                            <div class="new-item">
+                                <figure class="new-product-picture">
+                                    <img class="new-product-img" src="../src/images/sidebar{{pointer}}.png" alt="flowers" />
+                                </figure>
+                                <div class="new-description">
+                                    <h3>Excepteur sint </h3>
+                                    <h3>occaecat cupidatat</h3>
+                                    <p class="paragraf">{{description}}</p>
+                                    <p class="paragraf current-price">
+                                        <span>{{price}}</span>
+                                        <span class="old-price">{{oldprice}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>{{/sidebarItems}}
+                    </aside>
+                </div>
+                <section class="main-content-items">
+                    <h3 class="content-header">Featured products</h3>
+                    <section class="content-items">
+                        <section class="content-items">
+                            {{#contentItems}}
+                            <div class="item">
+                                <div class="content-item"><div class="inner-item-wrapper">
+                                    <figure class="content-picture"><span class="sale-value">{{salevalue}}</span>
+                                        <img class="content-img" src="../src/images/content{{pointer}}.png" alt="flowers" />
+                                        <figcaption class="content-product-title">{{title}}</figcaption>
+                                        <p class="content-description">
+                                            <span class="main-description">{{description}}</span>
+                                        <p class="current-price">
+                                            <span>{{currentprice}}</span>
+                                            <span class="new-price">{{newprice}}</span>
+                                            <span class="old-price">{{oldprice}}</span>
+                                        </p>
+                                        </p>
+                                    </figure>
+                                    <button class="btn content-btn add-btn ">Add to cart</button>
+                                    <button class="btn content-btn details-btn">Details</button>
+                                </div>
+                                </div>
+                            </div>
+                            {{/contentItems}}
+                        </section>
+                    </section>
+                </section>
+            </div>
+            <div class="container custom-line">
+                <section class="items">{{#customBlockItems}}
+                    <div class="item">
+                        {{#customHeaderTag}}<{{customHeaderTag}} class="custom-header">{{titleofMainHeader}}{{pointer}}</{{customHeaderTag}}>{{/customHeaderTag}}
+                        {{#customPictureTag}}<{{customPictureTag}} class="custom-picture"><img src="../src/images/content-banner{{pointer}}.png" alt="custom product" /></{{customPictureTag}}>{{/customPictureTag}}
+                        {{#descriptionTag}}
+                        <{{descriptionTag}} class="custom-description">
+                        {{#customHeaderTagSecondBlock}}<{{customHeaderTagSecondBlock}} class="custom-header">{{titleofMainHeaderSecondBlock}}{{pointer}}</{{customHeaderTagSecondBlock}}>{{/customHeaderTagSecondBlock}}
+                        {{#paragrafTag}}<{{paragrafTag}} class="custom-text">{{descriptionText}}</{{paragrafTag}}>{{/paragrafTag}}
+                        </{{descriptionTag}}>
+                        {{/descriptionTag}}
+                        {{#paragrafHeaderTag}}<{{paragrafHeaderTag}} class="block-header">{{firstParagrafHeaderTitle}}</{{paragrafHeaderTag}}>{{/paragrafHeaderTag}}
+                        {{#paragrafTag}}<{{paragrafTag}} class="custom-text">{{firstParagrafText}}</{{paragrafTag}}>{{/paragrafTag}}
+                        {{#paragrafHeaderTag}}<{{paragrafHeaderTag}} class="block-header">{{secondParagrafHeaderTitle}}</{{paragrafHeaderTag}}>{{/paragrafHeaderTag}}
+                        {{#paragrafTag}}<{{paragrafTag}} class="custom-text">{{secondParagrafText}}</{{paragrafTag}}>{{/paragrafTag}}
+</div>{{/customBlockItems}}
+</section>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="common-infolinks-for-customers">
+                {{#listInfolinksBlock}}
+                <div class="info-links-block">
+                    <h4 class="info-header">{{headerTitle}}</h4>
+                    {{#listitems}}{{#firstLink}}<{{linkTag}} class="link" href="#">{{firstLink}}</{{linkTag}}>{{/firstLink}}
+                    {{#secondLink}}<{{linkTag}} class="link" href="#">{{secondLink}}</{{linkTag}}>{{/secondLink}}
+                    {{#thirdLink}}<{{linkTag}} class="link" href="#">{{thirdLink}}</{{linkTag}}>{{/thirdLink}}
+                    {{#fourthLink}}<{{linkTag}} class="link" href="#">{{fourthLink}}</{{linkTag}}>{{/fourthLink}}
+                    {{#fivethLink}}<{{linkTag}} class="link" href="#">{{fivethLink}}</{{linkTag}}>{{/fivethLink}}
+                    {{#sixthLink}}<{{linkTag}} class="link" href="#">{{sixthLink}}</{{linkTag}}>{{/sixthLink}}
+                    {{#seventhLink}}<{{linkTag}} class="link" href="#">{{seventhLink}}</{{linkTag}}>{{/seventhLink}}
+                    {{#paragrafContent}}<{{paragrafTag}} class="copyright-text">{{paragrafContent}}</{{paragrafTag}}>{{/paragrafContent}}
+                    {{#phoneNumber}}<{{phoneTag}} class="phone">{{phoneNumber}}</{{phoneTag}}>{{/phoneNumber}}{{/listitems}}
+                </div>
+                {{/listInfolinksBlock}}
+</div>
+        </div>
+        <div class="container">
+            <nav class="footer-menu">
+            <ul class="list">
+            {{#footer-menu-list}}
+            <li class="list-item">
+            <a class="link">{{listitem}}</a>
+            </li>
+            {{/footer-menu-list}}
+            </ul>
+            </nav>
+        </div>
+    </footer>
+</div>
+{{/content-list-wrapper}}

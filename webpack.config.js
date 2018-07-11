@@ -1,3 +1,4 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -12,9 +13,6 @@ module.exports = {
         {
             test: /\.html$/,
             loader: 'mustache-loader'
-            // loader: 'mustache-loader?minify'
-            // loader: 'mustache-loader?{ minify: { removeComments: false } }'
-            // loader: 'mustache-loader?noShortcut'
         },
         {
             test: /\.js$/,
@@ -28,16 +26,20 @@ module.exports = {
             use: 'file-loader?name=[name].[ext]&outputPath=images/'
 
         },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
+        {
+            test: /\.scss$/,
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'sass-loader']
         })
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css')
+      new HtmlWebpackPlugin({
+          //template: 'src/mustache-html/mustache.html',
+          inject: 'body',
+      }),
+      new ExtractTextPlugin('style.css')
   ]
 };

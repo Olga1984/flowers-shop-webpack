@@ -107,7 +107,7 @@ body {
 
              &::before {
                content: '';
-               background-image: url('../../images/caret.png');
+               background-image: url('../../src/images/caret.png');
                background-repeat: no-repeat;
                background-position: 3px 5px;
                width: 10px;
@@ -141,7 +141,7 @@ body {
          display: block;
          width: 30px;
          height: 30px;
-         background: url('../../images/search-caret.png') no-repeat 9px center;
+         background: url('../../src/images/search-caret.png') no-repeat 9px center;
          border-right: $main-light-grey;
          float: left;
         }
@@ -173,7 +173,7 @@ body {
 
           &::before {
             content: '';
-            background-image: url('../../images/caret.png');
+            background-image: url('../../src/images/caret.png');
             background-repeat: no-repeat;
             background-position: 3px 5px;
             width: 10px;
@@ -250,7 +250,7 @@ body {
       position: relative;
       height: 405px;
       background-color: $light-grey;
-      background-image: url('../../images/slider.png');
+      background-image: url('../../src/images/slider.png');
       background-repeat: no-repeat;
 
       .container {
@@ -400,7 +400,7 @@ body {
 
      &.main-banner {
       background-color: $light-grey;
-      background-image: url('../../images/banner_cut-photo.ru.png');
+      background-image: url('../../src/images/banner_cut-photo.ru.png');
       height: 240px;
       position: relative;
 
